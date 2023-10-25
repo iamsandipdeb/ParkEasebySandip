@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - ParkEase</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+<body>
+<div class="navbar">
+    <a href="{{ url_for('login') }}">Home</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('services') }}">Services</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+</div>
+
+<div class="box-form">
+    <div class="left">
+        <div class="overlay">
+            <h1>ParkEase</h1>
+            <p>Redefining Office Parking</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <h5>About Us</h5>
+        <p>ParkEase is dedicated to revolutionizing office parking, offering seamless solutions for a stress-free parking experience. Our mission is to simplify your daily commute by providing secure and convenient parking services. With a commitment to innovation and user satisfaction, we aim to make your workplace parking hassle-free.</p>
+
+        <h5>Our Services</h5>
+        <ul>
+            <li>Secure Parking Spaces</li>
+            <li>Online Booking</li>
+            <li>QR Code Access</li>
+            <li>Customer Support</li>
+        </ul>
+
+        <h5>Contact Information</h5>
+        <p>Email: sandip.mca22@bmsce.ac.in</p>
+        <p>Phone: +91 7896985216</p>
+        <p>Address: BMS College of Engineering, Bull Temple Road, Bengaluru, Karnataka 560019</p>
+    </div>
+</div>
+
+<div class="footer">
+    Copyright to Sandip Deb, Pradeep Singh, Sakary Vishnu
+    <br>
+    <span class="developer-details">
+        Developed by <a href="#">Sandip Deb & Team</a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+    </span>
+</div>
+</body>
+</html>

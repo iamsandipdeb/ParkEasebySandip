@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Confirmation</h1>
+        <p>Hello {{ username }},</p>
+        <p>Your booking has been confirmed:</p>
+        <p>Date: {{ date }}</p>
+        <p>Start Time: {{ start_time }}</p>
+        <p>End Time: {{ end_time }}</p>
+        <p>Location: {{ location }}</p>
+        <p>Section: {{ section }}</p>  
+        <p>Parking Number: {{ parking_number }}</p>
+        <div class="qr-code">
+            <img src="{{ url_for('static', filename='qr_codes/' + unique_id + '.png') }}" alt="QR Code">
+        </div>
+        <p>Thank you for using our service!</p>
+    </div>
+</body>
+</html>

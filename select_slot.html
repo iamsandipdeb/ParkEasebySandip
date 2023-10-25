@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='slot.css') }}">
+    <title>Select Time Slot</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('login') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+
+    <div class="box-form select-slot">
+        <div class="left">
+            <div class="overlay">
+                <h1 class="park-ease">Park Ease</h1>
+                <p>Redefining Office Parking</p>
+                <span>
+                    <p>Select Time Slot</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="right">
+            <h5>Select Slot</h5>
+            <form action="{{ url_for('select_slot') }}" method="post">
+                
+                <div class="inputs">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    <label for="start_time">Start Time:</label>
+                    <input type="time" id="start_time" name="start_time" required>
+                    <label for="end_time">End Time:</label>
+                    <input type="time" id="end_time" name="end_time" required>
+
+
+                    <label for="office_location">Office Location:</label>
+
+                    <select id="office_location" name="location" required>
+                        <option value="Whitefield">Whitefield</option>
+                        <option value="Basvangudi">Basvangudi</option>
+                        <option value="Electronic City">Electronic City</option>
+                        <option value="Kormangala">Kormangala</option>
+                    </select>
+
+                    <label for="parking_slot">Parking Slot:</label>
+                    
+                    <select id="parking_slot" name="section" required>
+                        <option value="Section A1">Section A1</option>
+                        <option value="Section A2">Section A2</option>
+                        <option value="Section B1">Section B1</option>
+                        <option value="Section B2">Section B2</option>
+                    </select>
+
+                </div>
+                <button type="submit" class="btn">Book Slot</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright to Sandip Deb, Pradeep Singh, Sakary Vishnu
+        <br>
+        <span class="developer-details">
+            Developed by <a href="#">Sandip Deb & Team</a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+        </span>
+    </div>
+</body>
+</html>

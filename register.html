@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ParkEase - Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+<div class="navbar">
+    <a href="{{ url_for('login') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+</div>
+
+<div class="box-form">
+    <div class="left">
+        <div class="overlay">
+            <h1 class="park-ease">Park Ease</h1>
+            <p>Redefining Office Parking</p>
+            <span>
+                <p>Create an account to get started</p>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Sign up with Facebook</a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Sign up with Twitter</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="right">
+        <h5>Register</h5>
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+        <form method="POST" action="{{ url_for('register') }}">
+            <div class="inputs">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; Copyright to Sandip Deb, Pradeep Singh, Sakary Vishnu
+    <br>
+    <span class="developer-details">
+        Developed by <a href="#">Sandip Deb & Team</a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+    </span>
+</div>
+</body>
+</html>
